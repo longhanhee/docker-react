@@ -1,8 +1,10 @@
 
 sudo: required
+
 services:
   - docker
 before_install:
+  - gem install bundler --pre
   - docker build -t hanhee/docker-react -f Dockerfile.dev .
 
 script:
